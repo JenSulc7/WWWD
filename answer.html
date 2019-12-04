@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <style>
+            .center {
+                margin: auto;
+                width: 60%;
+                padding: 10px;
+                text-align: center;
+                color: white;
+            }
+            
+            #body {
+                background: #800020;
+            }
+            
+            .wine-image {
+                height: 30%
+            }
+            
+            .white {
+                color: white;
+            }
+            
+            .center-table {
+                margin: auto;
+                width: 60%;
+                padding: 10px;
+                color: white;
+            }
+            #menu-div {
+                height:100%;
+                width:20%;
+                float:left;
+                border: solid grey 10px;
+                padding 2px;
+                margin-left: 20%;
+            }
+        </style>
+    </head>
+    <body id="body">
+        <h1 class="center">Jen's Wine Cellar</h1>
+        <p class="center">Welcome to Jen's Wine Cellar! These are all of her favorite wines, hand picked over the numerous bottles she's celebrated with :) </p>
+        <br/>
+        <div id="menu-div">
+            <button id="toggle-button" style="width:95%; margin:5px; font-size:20px; padding:5px;" onClick="toggleList()">Hide</button>
+            <div id="collapsible-list">
+                <p class="center-table">My 3 favorite wines in my cellar are</p>
+                <ol class="center-table">
+                    <li>Syrah</li>
+                    <li>Malbec</li>
+                    <li>Sauvignon Blanc</li>
+                </ol>
+                <br/>
+                <p class="center-table">Some wines I would like to try</p>
+                <ul class="center-table">
+                    <li>Bordeaux</li>
+                    <li>Riesling</li>
+                    <li>Pinot Gris</li>
+                </ul>
+            </div>
+        </div>
+        <div style="float:left">
+            <table class="center" cellspacing="50">
+                <tr>
+                    <th><h2><u>Reds</u></h2></th>
+                    <th><h2><u>Whites</u></h2></th>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <h5>RedHead Red Blend</h5>
+                            <img src="./Wine%20Images/redhead-red.jpeg" class="wine-image"/>
+                            <br/>
+                            <br/>
+                            <a href="https://redheadwine.us/consumers" class="white">Buy Me!</a>
+                        </div> 
+                    </td>
+                    <td>
+                        <div>
+                            <h5>Passion Apple</h5>
+                            <img src="./Wine%20Images/luva-bella-passion-apple.png" class="wine-image"/>
+                            <br/>
+                            <br/>
+                            <a href="https://luvabella.com/wine-collections/passion" class="white">Buy Me!</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <h5>Rhiannon Red Blend</h5>
+                            <img src="./Wine%20Images/nv-Rhiannon-bottle-shot.png" class="wine-image"/>
+                            <br/>
+                            <br/>
+                            <a href="https://rutherfordranch.com/rhiannon" class="white">Buy Me!</a>
+                        </div> 
+                    </td>
+                    <td>
+                        <div>
+                            <h5>Seaglass Sauvignon Blanc</h5>
+                            <img src="./Wine%20Images/SeaGlass-Sauvignon-Blanc.png" class="wine-image">
+                            <br/>
+                            <br/>
+                            <a href="https://www.totalwine.com/wine/white-wine/sauvignon-blanc/sea-glass-sauvignon-blanc/p/116216750" class="white">Buy Me!</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+    </body>
+    <script>
+            function toggleList() {
+                var collapsibleListDiv = document.getElementById("collapsible-list")
+                var button = document.getElementById("toggle-button")
+                if(collapsibleListDiv.style.display === "none") {
+                    button.innerHTML = "Hide"
+                    collapsibleListDiv.style.display = "block";
+                } else {
+                    button.innerHTML = "Show"
+                    collapsibleListDiv.style.display = "none";
+                }
+            }
+        </script>
+</html>
